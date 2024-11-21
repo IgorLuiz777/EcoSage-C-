@@ -1,0 +1,41 @@
+name: CI for EcoSage API - C#
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build-and-test:
+    runs-on: windows-latest
+
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+
+    steps:
+    # Checkout do código do repositório
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    # Configurar .NET Core
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+
+    # Restaurar dependências
+    - name: Restore dependencies
+      run: dotnet restore
+
+    # Build do projeto
+    - name: Build project
+      run: dotnet build --configuration ${{ matrix.configuration }}
+
+    # Executar testes
+    - name: Run unit tests
+      run: dotnet test --no-build --configuration ${{ matrix.configuration }}
+
