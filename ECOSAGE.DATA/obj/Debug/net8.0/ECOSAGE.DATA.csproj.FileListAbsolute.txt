@@ -1,0 +1,15 @@
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\bin\Debug\net8.0\ECOSAGE.DATA.deps.json
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\bin\Debug\net8.0\ECOSAGE.DATA.runtimeconfig.json
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\bin\Debug\net8.0\ECOSAGE.DATA.dll
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\bin\Debug\net8.0\ECOSAGE.DATA.pdb
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.csproj.AssemblyReference.cache
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.AssemblyInfoInputs.cache
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.AssemblyInfo.cs
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.csproj.CoreCompileInputs.cache
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.sourcelink.json
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.dll
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\refint\ECOSAGE.DATA.dll
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.pdb
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ECOSAGE.DATA.genruntimeconfig.cache
+C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\obj\Debug\net8.0\ref\ECOSAGE.DATA.dll

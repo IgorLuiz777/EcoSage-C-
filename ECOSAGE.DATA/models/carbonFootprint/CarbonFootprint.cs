@@ -12,7 +12,7 @@ public class CarbonFootprint
 
     public DateTime TimeStamp { get; set; }
     
-    public List<Activity> Activities { get; set; }
+    public List<Activity> Activities { get; set; } = new List<Activity>();
     
     public decimal TotalEmission { get; set; }
 

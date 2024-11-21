@@ -7,7 +7,7 @@ namespace ECOSAGE.DATA.models.carbonFootprint
     {
         public void Configure(EntityTypeBuilder<CarbonFootprint> builder)
         {
-            builder.ToTable("ECOSAGE_CarbonFootprint");
+            builder.ToTable("ECOSAGE_CARBONFOOTPRINT");
 
             builder.HasKey(c => c.CarbonFootprintId);
 

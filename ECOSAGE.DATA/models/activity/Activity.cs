@@ -19,6 +19,6 @@ public class Activity
     
     public decimal Emission { get; set; }
     
+    public int CarbonFootprintId { get; set; }
     public CarbonFootprint CarbonFootprint { get; set; }
-    public CarbonFootprint CarbonFootprintId { get; set; }
 }

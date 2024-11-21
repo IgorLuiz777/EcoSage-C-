@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECOSAGE.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80e181faebbd936f1c3ce14b060b75e7986626f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECOSAGE.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECOSAGE.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
