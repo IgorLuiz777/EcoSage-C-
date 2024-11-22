@@ -1,7 +1,9 @@
 using ECOSAGE.DATA.db;
 using ECOSAGE.REPOSITORY.activity;
+using ECOSAGE.REPOSITORY.carbonFootprint;
 using ECOSAGE.REPOSITORY.user;
 using ECOSAGE.SERVICE.activity;
+using ECOSAGE.SERVICE.carbonFootprint;
 using ECOSAGE.SERVICE.user;
 using Microsoft.EntityFrameworkCore;
 
@@ -22,6 +24,9 @@ builder.Services.AddScoped<UserService>();
 
 builder.Services.AddScoped<ActivityRepository>();
 builder.Services.AddScoped<ActivityService>();
+
+builder.Services.AddScoped<CarbonFootprintRepository>();
+builder.Services.AddScoped<CarbonFootprintService>();
 
 var app = builder.Build();
 
