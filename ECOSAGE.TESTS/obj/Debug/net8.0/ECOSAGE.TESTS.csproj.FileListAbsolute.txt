@@ -1,0 +1,12 @@
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\bin\Debug\net8.0\ECOSAGE.TESTS.deps.json
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\bin\Debug\net8.0\ECOSAGE.TESTS.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\bin\Debug\net8.0\ECOSAGE.TESTS.pdb
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ECOSAGE.TESTS.GeneratedMSBuildEditorConfig.editorconfig
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ECOSAGE.TESTS.AssemblyInfoInputs.cache
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ECOSAGE.TESTS.AssemblyInfo.cs
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ECOSAGE.TESTS.csproj.CoreCompileInputs.cache
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ECOSAGE.TESTS.sourcelink.json
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ECOSAGE.TESTS.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\refint\ECOSAGE.TESTS.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ECOSAGE.TESTS.pdb
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.TESTS\obj\Debug\net8.0\ref\ECOSAGE.TESTS.dll

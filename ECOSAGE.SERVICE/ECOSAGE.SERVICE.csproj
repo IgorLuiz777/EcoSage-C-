@@ -6,4 +6,8 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\ECOSAGE.REPOSITORY\ECOSAGE.REPOSITORY.csproj" />
+    </ItemGroup>
+
 </Project>

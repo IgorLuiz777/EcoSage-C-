@@ -11,25 +11,20 @@ namespace ECOSAGE.DATA.models
 
             builder.HasKey(u => u.UserId);
 
-            builder.Property(u => u.Name)
-                .IsRequired()
-                .HasMaxLength(100);
-            
-            builder.Property(u => u.Email)
-                .IsRequired()
-                .HasMaxLength(100);
-
-            builder.Property(u => u.Password)
-                .IsRequired()
-                .HasMaxLength(100);
+            builder.Property(u => u.Name).IsRequired().HasMaxLength(100);
+            builder.Property(u => u.Email).IsRequired().HasMaxLength(100);
+            builder.Property(u => u.Password).IsRequired().HasMaxLength(100);
 
             builder.HasMany(u => u.Activities)
                 .WithOne(a => a.User)
-                .HasForeignKey(a => a.UserId);
+                .HasForeignKey(a => a.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(u => u.CarbonFootprints)
                 .WithOne(c => c.User)
-                .HasForeignKey(c => c.UserId);
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
+
 }

@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ECOSAGE.DATA
-build_property.ProjectDir = C:\Users\igor.lima\Desktop\ecosage-c#\ECOSAGE\ECOSAGE.DATA\
+build_property.ProjectDir = P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.DATA\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -13,17 +13,16 @@ namespace ECOSAGE.DATA.models.carbonFootprint
 
             builder.HasOne(c => c.User)
                 .WithMany(u => u.CarbonFootprints)
-                .HasForeignKey(c => c.UserId);
-
-            builder.Property(c => c.TimeStamp)
-                .IsRequired();
-
-            builder.Property(c => c.TotalEmission)
-                .HasColumnType("decimal(18,2)");
+                .HasForeignKey(c => c.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasMany(c => c.Activities)
-                .WithOne()
-                .HasForeignKey(a => a.CarbonFootprintId);
+                .WithOne(a => a.CarbonFootprint)
+                .HasForeignKey(a => a.CarbonFootprintId)
+                .OnDelete(DeleteBehavior.Cascade);
+
+            builder.Property(c => c.TimeStamp).IsRequired();
+            builder.Property(c => c.TotalEmission).HasColumnType("decimal(18,2)");
         }
     }
 }

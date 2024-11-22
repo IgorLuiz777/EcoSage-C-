@@ -1,0 +1,16 @@
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\bin\Debug\net8.0\ECOSAGE.REPOSITORY.deps.json
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\bin\Debug\net8.0\ECOSAGE.REPOSITORY.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\bin\Debug\net8.0\ECOSAGE.REPOSITORY.pdb
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.GeneratedMSBuildEditorConfig.editorconfig
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.AssemblyInfoInputs.cache
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.AssemblyInfo.cs
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.csproj.CoreCompileInputs.cache
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.sourcelink.json
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\refint\ECOSAGE.REPOSITORY.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.pdb
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ref\ECOSAGE.REPOSITORY.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE.REPOSITORY.csproj.AssemblyReference.cache
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\bin\Debug\net8.0\ECOSAGE.DATA.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\bin\Debug\net8.0\ECOSAGE.DATA.pdb
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.REPOSITORY\obj\Debug\net8.0\ECOSAGE..F1649F7A.Up2Date

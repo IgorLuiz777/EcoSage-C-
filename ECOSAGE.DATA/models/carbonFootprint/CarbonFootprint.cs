@@ -11,9 +11,9 @@ public class CarbonFootprint
     public int UserId { get; set; }
 
     public DateTime TimeStamp { get; set; }
-    
+
     public List<Activity> Activities { get; set; } = new List<Activity>();
-    
+
     public decimal TotalEmission { get; set; }
 
     public CarbonFootprint()
