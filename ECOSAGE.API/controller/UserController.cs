@@ -40,9 +40,9 @@ namespace ECOSAGE.API.controller
                 await _userService.CreateUserAsync(user);
                 return CreatedAtAction(nameof(GetById), new { id = user.UserId }, user);
             }
-            catch (ArgumentException ex)
+            catch (ArgumentException e)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(e.Message);
             }
         }
 
@@ -57,9 +57,9 @@ namespace ECOSAGE.API.controller
                 await _userService.UpdateUserAsync(user);
                 return NoContent();
             }
-            catch (KeyNotFoundException ex)
+            catch (KeyNotFoundException e)
             {
-                return NotFound(ex.Message);
+                return NotFound(e.Message);
             }
         }
 

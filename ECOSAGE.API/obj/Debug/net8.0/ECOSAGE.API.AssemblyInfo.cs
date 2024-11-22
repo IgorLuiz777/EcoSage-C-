@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECOSAGE.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9d9138925cd6c51d218e000abf9b2dbffc19d56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+099301f63fa9ca639281be51923a3fd7b14bdea9")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECOSAGE.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECOSAGE.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
