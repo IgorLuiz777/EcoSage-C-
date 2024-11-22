@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECOSAGE.TESTS")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9d9138925cd6c51d218e000abf9b2dbffc19d56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c17d6bc688b52577259e3c6d2f51d77a1622021")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECOSAGE.TESTS")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECOSAGE.TESTS")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

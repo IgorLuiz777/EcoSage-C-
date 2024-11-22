@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ECOSAGE.API</name>
+    </assembly>
+    <members>
+        <member name="M:ECOSAGE.API.controller.ActivityController.AddEnergyActivity(ECOSAGE.DATA.models.activity.dto.EnergyActivityRequestDto)">
+            <summary>
+            Adds a new energy activity.
+            </summary>
+            <param name="dto">The DTO containing energy activity details.</param>
+            <returns>A success message or an error message.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.ActivityController.AddTransportActivity(ECOSAGE.DATA.models.activity.dto.TransportActivityRequestDto)">
+            <summary>
+            Adds a new transport activity.
+            </summary>
+            <param name="dto">The DTO containing transport activity details.</param>
+            <returns>A success message or an error message.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.ActivityController.GetAllActivities">
+            <summary>
+            Retrieves all activities.
+            </summary>
+            <returns>A list of all activities or an error message.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.ActivityController.GetActivityById(System.Int32)">
+            <summary>
+            Retrieves a specific activity by ID.
+            </summary>
+            <param name="id">The ID of the activity.</param>
+            <returns>The requested activity or an error message.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.ActivityController.DeleteActivity(System.Int32)">
+            <summary>
+            Deletes a specific activity by ID.
+            </summary>
+            <param name="id">The ID of the activity to delete.</param>
+            <returns>A success message or an error message.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.AiController.SendMessageToAi(System.String)">
+            <summary>
+            Sends a message to the AI and retrieves a response.
+            </summary>
+            <param name="userMessage">Message sent by the user.</param>
+            <returns>AI's response.</returns>
+            <response code="200">Successfully returns the AI's response.</response>
+            <response code="400">Invalid or empty input message.</response>
+            <response code="404">No response found from the AI.</response>
+            <response code="500">Internal server error.</response>
+        </member>
+        <member name="T:ECOSAGE.API.controller.CarbonFootprintController">
+            <summary>
+            Controller for managing carbon footprints.
+            </summary>
+        </member>
+        <member name="M:ECOSAGE.API.controller.CarbonFootprintController.#ctor(ECOSAGE.SERVICE.carbonFootprint.CarbonFootprintService)">
+            <summary>
+            Constructor for CarbonFootprintController.
+            </summary>
+            <param name="carbonFootprintService">Service for managing carbon footprint operations.</param>
+        </member>
+        <member name="M:ECOSAGE.API.controller.CarbonFootprintController.GetAll">
+            <summary>
+            Retrieves all carbon footprints.
+            </summary>
+            <returns>A list of carbon footprints or a NoContent status if none exist.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.CarbonFootprintController.GetById(System.Int32)">
+            <summary>
+            Retrieves a carbon footprint by ID.
+            </summary>
+            <param name="id">The ID of the carbon footprint.</param>
+            <returns>The carbon footprint if found, or a NotFound status.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.CarbonFootprintController.Create(ECOSAGE.DATA.models.carbonFootprint.dto.CarbonFootprintRequestDto)">
+            <summary>
+            Creates a new carbon footprint.
+            </summary>
+            <param name="dto">The carbon footprint data transfer object.</param>
+            <returns>The created carbon footprint with its ID, or a BadRequest status for invalid input.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.CarbonFootprintController.Update(System.Int32,ECOSAGE.DATA.models.carbonFootprint.CarbonFootprint)">
+            <summary>
+            Updates an existing carbon footprint.
+            </summary>
+            <param name="id">The ID of the carbon footprint to update.</param>
+            <param name="carbonFootprint">The updated carbon footprint object.</param>
+            <returns>A NoContent status if successful, or an error status for invalid input or not found.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.CarbonFootprintController.Delete(System.Int32)">
+            <summary>
+            Deletes a carbon footprint by ID.
+            </summary>
+            <param name="id">The ID of the carbon footprint to delete.</param>
+            <returns>A NoContent status.</returns>
+        </member>
+        <member name="T:ECOSAGE.API.controller.UsersController">
+            <summary>
+            Controller for managing users.
+            </summary>
+        </member>
+        <member name="M:ECOSAGE.API.controller.UsersController.#ctor(ECOSAGE.SERVICE.user.UserService)">
+            <summary>
+            Constructor for UsersController.
+            </summary>
+            <param name="userService">Service to manage user operations.</param>
+        </member>
+        <member name="M:ECOSAGE.API.controller.UsersController.GetAll">
+            <summary>
+            Retrieves all users.
+            </summary>
+            <returns>A list of users.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.UsersController.GetById(System.Int32)">
+            <summary>
+            Retrieves a user by their ID.
+            </summary>
+            <param name="id">The ID of the user.</param>
+            <returns>The user if found, or a 404 status code.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.UsersController.Create(ECOSAGE.DATA.models.User)">
+            <summary>
+            Creates a new user.
+            </summary>
+            <param name="user">The user object to be created.</param>
+            <returns>The created user with its ID.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.UsersController.Update(System.Int32,ECOSAGE.DATA.models.User)">
+            <summary>
+            Updates an existing user.
+            </summary>
+            <param name="id">The ID of the user to update.</param>
+            <param name="user">The updated user object.</param>
+            <returns>A NoContent status if successful, or an error status.</returns>
+        </member>
+        <member name="M:ECOSAGE.API.controller.UsersController.Delete(System.Int32)">
+            <summary>
+            Deletes a user by their ID.
+            </summary>
+            <param name="id">The ID of the user to delete.</param>
+            <returns>A NoContent status.</returns>
+        </member>
+    </members>
+</doc>

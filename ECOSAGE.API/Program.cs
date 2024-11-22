@@ -7,12 +7,35 @@ using ECOSAGE.SERVICE.ai;
 using ECOSAGE.SERVICE.carbonFootprint;
 using ECOSAGE.SERVICE.user;
 using Microsoft.EntityFrameworkCore;
-using System.Text.Json.Serialization;
+using Microsoft.OpenApi.Models;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new OpenApiInfo
+    {
+        Version = "v1",
+        Title = "EcoSage - C#",
+        Description = "API documentation for EcoSage project",
+        Contact = new OpenApiContact
+        {
+            Name = "Igor Luiz",
+            Email = "rm99809@fiap.com.br",
+            Url = new Uri("https://github.com/IgorLuiz777")
+        },
+        License = new OpenApiLicense
+        {
+            Name = "Source Code",
+            Url = new Uri("https://github.com/IgorLuiz777/EcoSage-CSharp")
+        }
+    });
+    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+    options.IncludeXmlComments(xmlPath);
+});
 
 builder.Services.AddDbContext<OracleDbContext>(options =>
 {

@@ -14,6 +14,15 @@ namespace ECOSAGE.API.controller
             _aiService = aiService;
         }
 
+        /// <summary>
+        /// Sends a message to the AI and retrieves a response.
+        /// </summary>
+        /// <param name="userMessage">Message sent by the user.</param>
+        /// <returns>AI's response.</returns>
+        /// <response code="200">Successfully returns the AI's response.</response>
+        /// <response code="400">Invalid or empty input message.</response>
+        /// <response code="404">No response found from the AI.</response>
+        /// <response code="500">Internal server error.</response>
         [HttpPost("message")]
         public async Task<IActionResult> SendMessageToAi([FromBody] string userMessage)
         {

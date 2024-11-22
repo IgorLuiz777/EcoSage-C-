@@ -1,9 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-    </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+		<PackageReference Include="Moq" Version="4.20.72" />
+		<PackageReference Include="xunit" Version="2.4.2" />
+		<PackageReference Include="xunit.runner.visualstudio" Version="2.4.5" />
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.3" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\ECOSAGE.API\ECOSAGE.API.csproj" />
+		<ProjectReference Include="..\ECOSAGE.DATA\ECOSAGE.DATA.csproj" />
+		<ProjectReference Include="..\ECOSAGE.REPOSITORY\ECOSAGE.REPOSITORY.csproj" />
+		<ProjectReference Include="..\ECOSAGE.SERVICE\ECOSAGE.SERVICE.csproj" />
+	</ItemGroup>
 
 </Project>

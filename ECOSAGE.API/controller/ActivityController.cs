@@ -16,6 +16,11 @@ namespace ECOSAGE.API.controller
             _activityService = activityService;
         }
 
+        /// <summary>
+        /// Adds a new energy activity.
+        /// </summary>
+        /// <param name="dto">The DTO containing energy activity details.</param>
+        /// <returns>A success message or an error message.</returns>
         [HttpPost("energy")]
         public async Task<IActionResult> AddEnergyActivity([FromBody] EnergyActivityRequestDto dto)
         {
@@ -30,6 +35,11 @@ namespace ECOSAGE.API.controller
             }
         }
 
+        /// <summary>
+        /// Adds a new transport activity.
+        /// </summary>
+        /// <param name="dto">The DTO containing transport activity details.</param>
+        /// <returns>A success message or an error message.</returns>
         [HttpPost("transport")]
         public async Task<IActionResult> AddTransportActivity([FromBody] TransportActivityRequestDto dto)
         {
@@ -44,6 +54,10 @@ namespace ECOSAGE.API.controller
             }
         }
 
+        /// <summary>
+        /// Retrieves all activities.
+        /// </summary>
+        /// <returns>A list of all activities or an error message.</returns>
         [HttpGet]
         public async Task<ActionResult<List<Activity>>> GetAllActivities()
         {
@@ -58,6 +72,11 @@ namespace ECOSAGE.API.controller
             }
         }
 
+        /// <summary>
+        /// Retrieves a specific activity by ID.
+        /// </summary>
+        /// <param name="id">The ID of the activity.</param>
+        /// <returns>The requested activity or an error message.</returns>
         [HttpGet("{id}")]
         public async Task<IActionResult> GetActivityById(int id)
         {
@@ -72,6 +91,11 @@ namespace ECOSAGE.API.controller
             }
         }
 
+        /// <summary>
+        /// Deletes a specific activity by ID.
+        /// </summary>
+        /// <param name="id">The ID of the activity to delete.</param>
+        /// <returns>A success message or an error message.</returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteActivity(int id)
         {

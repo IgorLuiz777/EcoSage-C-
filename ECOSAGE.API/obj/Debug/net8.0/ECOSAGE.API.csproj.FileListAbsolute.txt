@@ -129,3 +129,5 @@ P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.API\bin\Debug\net8.0\GroqApiLibrar
 P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authorization.dll
 P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.API\bin\Debug\net8.0\Microsoft.AspNetCore.Components.dll
 P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.API\bin\Debug\net8.0\Microsoft.AspNetCore.Metadata.dll
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.API\bin\Debug\net8.0\ECOSAGE.API.xml
+P:\projects\ecoSage-C#\EcoSage-CSharp\ECOSAGE.API\obj\Debug\net8.0\ECOSAGE.API.xml
