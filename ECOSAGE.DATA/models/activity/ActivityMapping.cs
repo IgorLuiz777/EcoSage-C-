@@ -6,7 +6,7 @@ namespace ECOSAGE.DATA.models.activity
     public class ActivityMapping : IEntityTypeConfiguration<Activity>
     {
         public void Configure(EntityTypeBuilder<Activity> builder)
-        {   
+        {
             builder.ToTable("ECOSAGE_ACTIVITY");
 
             builder.HasKey(a => a.ActivityId);
@@ -17,17 +17,15 @@ namespace ECOSAGE.DATA.models.activity
 
             builder.HasOne(a => a.CarbonFootprint)
                 .WithMany(c => c.Activities)
-                .HasForeignKey(a => a.CarbonFootprintId);
-            
+                .HasForeignKey(a => a.CarbonFootprintId)
+                .OnDelete(DeleteBehavior.SetNull);
+
             builder.HasIndex(a => a.UserId);
 
             builder.HasIndex(a => a.CarbonFootprintId);
 
-            builder.Property(a => a.CarbonFootprintId)
-                .IsRequired();
-            
             builder.Property(a => a.Name)
-                .IsRequired()   
+                .IsRequired()
                 .HasMaxLength(100);
 
             builder.Property(a => a.Category)

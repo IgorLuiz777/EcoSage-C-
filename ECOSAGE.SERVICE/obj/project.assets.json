@@ -15,6 +15,72 @@
           }
         }
       },
+      "GroqApiLibrary/1.0.8": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Components": "8.0.7"
+        },
+        "compile": {
+          "lib/net8.0/GroqApiLibrary.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/GroqApiLibrary.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Authorization/8.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Metadata": "8.0.7",
+          "Microsoft.Extensions.Logging.Abstractions": "8.0.1",
+          "Microsoft.Extensions.Options": "8.0.2"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Authorization.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Authorization.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components/8.0.7": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authorization": "8.0.7",
+          "Microsoft.AspNetCore.Components.Analyzers": "8.0.7"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Components.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Components.dll": {
+            "related": ".xml"
+          }
+        }
+      },
+      "Microsoft.AspNetCore.Components.Analyzers/8.0.7": {
+        "type": "package",
+        "build": {
+          "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets": {}
+        }
+      },
+      "Microsoft.AspNetCore.Metadata/8.0.7": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.Metadata.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.Metadata.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore/8.0.11": {
         "type": "package",
         "dependencies": {
@@ -494,6 +560,89 @@
         "lib/netstandard2.1/BCrypt.Net-Next.dll",
         "lib/netstandard2.1/BCrypt.Net-Next.xml",
         "readme.md"
+      ]
+    },
+    "GroqApiLibrary/1.0.8": {
+      "sha512": "4adHLiU5KwuzUP7yH6obGKeLBffcdBQpuwzJ52UIijzAEWtNYG6EiL7lcCsawuqmEfziSpfezm2F3Kfek6/cMg==",
+      "type": "package",
+      "path": "groqapilibrary/1.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "README.md",
+        "g_icon.png",
+        "groqapilibrary.1.0.8.nupkg.sha512",
+        "groqapilibrary.nuspec",
+        "lib/net8.0/GroqApiLibrary.dll"
+      ]
+    },
+    "Microsoft.AspNetCore.Authorization/8.0.7": {
+      "sha512": "Oz8BvQ1iYwOTH5QcT5I+EGphgJbqCGuBRDk1BK7Hscx1xC8Bg6H0rtYcmiWdNn/cZ4Uu5FMr6z46sEZSSZ6ycw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authorization/8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net462/Microsoft.AspNetCore.Authorization.xml",
+        "lib/net8.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Authorization.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Authorization.xml",
+        "microsoft.aspnetcore.authorization.8.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.authorization.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components/8.0.7": {
+      "sha512": "rXAeBI1NpcqZ0s+LkVxe3zVJqow8GXZyTkw2pThnh/IWz/qsZshU8rve/23EXN14+l+7b3Ragt0JSO8+iwcMUw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components/8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "lib/net8.0/Microsoft.AspNetCore.Components.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Components.xml",
+        "microsoft.aspnetcore.components.8.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.components.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Components.Analyzers/8.0.7": {
+      "sha512": "S186J2WX2+7wM43u1kJ/BGy2fndKCSe6Swhd2f3xKr0p5VcQUUsQMhkWslmpXuNTQlZyeNw1w6IWXbzQoU347Q==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.components.analyzers/8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.txt",
+        "analyzers/dotnet/cs/Microsoft.AspNetCore.Components.Analyzers.dll",
+        "build/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "buildTransitive/netstandard2.0/Microsoft.AspNetCore.Components.Analyzers.targets",
+        "microsoft.aspnetcore.components.analyzers.8.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.components.analyzers.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Metadata/8.0.7": {
+      "sha512": "CD5PNOSnOh3XcqZaaxp0uENK4WTFifSkhWkuO9dQ/Mo7gpXwAMvrfwdqW2T7Z4YS+VXuka7Gf70f29HND9oQ3w==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.metadata/8.0.7",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net462/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net462/Microsoft.AspNetCore.Metadata.xml",
+        "lib/net8.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/net8.0/Microsoft.AspNetCore.Metadata.xml",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Metadata.xml",
+        "microsoft.aspnetcore.metadata.8.0.7.nupkg.sha512",
+        "microsoft.aspnetcore.metadata.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore/8.0.11": {
@@ -1192,7 +1341,9 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "ECOSAGE.REPOSITORY >= 1.0.0"
+      "ECOSAGE.DATA >= 1.0.0",
+      "ECOSAGE.REPOSITORY >= 1.0.0",
+      "GroqApiLibrary >= 1.0.8"
     ]
   },
   "packageFolders": {
@@ -1228,6 +1379,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.DATA\\ECOSAGE.DATA.csproj": {
+              "projectPath": "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.DATA\\ECOSAGE.DATA.csproj"
+            },
             "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.REPOSITORY\\ECOSAGE.REPOSITORY.csproj": {
               "projectPath": "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.REPOSITORY\\ECOSAGE.REPOSITORY.csproj"
             }
@@ -1248,6 +1402,12 @@
     "frameworks": {
       "net8.0": {
         "targetAlias": "net8.0",
+        "dependencies": {
+          "GroqApiLibrary": {
+            "target": "Package",
+            "version": "[1.0.8, )"
+          }
+        },
         "imports": [
           "net461",
           "net462",

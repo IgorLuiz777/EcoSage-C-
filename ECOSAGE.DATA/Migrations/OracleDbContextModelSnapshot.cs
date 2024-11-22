@@ -58,7 +58,7 @@ namespace ECOSAGE.DATA.Migrations
 
                     OraclePropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ActivityId"));
 
-                    b.Property<int>("CarbonFootprintId")
+                    b.Property<int?>("CarbonFootprintId")
                         .HasColumnType("NUMBER(10)");
 
                     b.Property<string>("Category")
@@ -120,8 +120,7 @@ namespace ECOSAGE.DATA.Migrations
                     b.HasOne("ECOSAGE.DATA.models.carbonFootprint.CarbonFootprint", "CarbonFootprint")
                         .WithMany("Activities")
                         .HasForeignKey("CarbonFootprintId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("ECOSAGE.DATA.models.User", "User")
                         .WithMany("Activities")

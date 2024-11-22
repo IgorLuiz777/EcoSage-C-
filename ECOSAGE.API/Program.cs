@@ -3,9 +3,11 @@ using ECOSAGE.REPOSITORY.activity;
 using ECOSAGE.REPOSITORY.carbonFootprint;
 using ECOSAGE.REPOSITORY.user;
 using ECOSAGE.SERVICE.activity;
+using ECOSAGE.SERVICE.ai;
 using ECOSAGE.SERVICE.carbonFootprint;
 using ECOSAGE.SERVICE.user;
 using Microsoft.EntityFrameworkCore;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -27,6 +29,8 @@ builder.Services.AddScoped<ActivityService>();
 
 builder.Services.AddScoped<CarbonFootprintRepository>();
 builder.Services.AddScoped<CarbonFootprintService>();
+
+builder.Services.AddScoped<AiService>();
 
 var app = builder.Build();
 

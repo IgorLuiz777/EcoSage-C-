@@ -1,6 +1,9 @@
 ﻿
+using BCrypt.Net;
 using ECOSAGE.DATA.models;
 using ECOSAGE.REPOSITORY.user;
+using static BCrypt.Net.BCrypt;
+
 
 namespace ECOSAGE.SERVICE.user
 {
@@ -26,8 +29,9 @@ namespace ECOSAGE.SERVICE.user
         public async Task CreateUserAsync(User user)
         {
             if (await EmailExists(user.Email))
-                throw new ArgumentException("Email já está em uso.");
+                throw new ArgumentException("Email in use.");
 
+            user.Password = HashPassword(user.Password);
             await _userRepository.AddAsync(user);
         }
 
@@ -46,7 +50,7 @@ namespace ECOSAGE.SERVICE.user
 
             if (!string.IsNullOrWhiteSpace(user.Password))
             {
-                existingUser.Password = BCrypt.Net.BCrypt.HashPassword(user.Password);
+                existingUser.Password = HashPassword(user.Password);
             }
 
             await _userRepository.UpdateAsync(existingUser);

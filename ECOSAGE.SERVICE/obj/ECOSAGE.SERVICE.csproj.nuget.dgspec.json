@@ -193,6 +193,9 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
+              "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.DATA\\ECOSAGE.DATA.csproj": {
+                "projectPath": "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.DATA\\ECOSAGE.DATA.csproj"
+              },
               "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.REPOSITORY\\ECOSAGE.REPOSITORY.csproj": {
                 "projectPath": "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.REPOSITORY\\ECOSAGE.REPOSITORY.csproj"
               }
@@ -213,6 +216,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "GroqApiLibrary": {
+              "target": "Package",
+              "version": "[1.0.8, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

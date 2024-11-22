@@ -1,10 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "OWHcQ+7PusE=",
+  "dgSpecHash": "rinEG8S8gHw=",
   "success": true,
   "projectFilePath": "P:\\projects\\ecoSage-C#\\EcoSage-CSharp\\ECOSAGE.SERVICE\\ECOSAGE.SERVICE.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Igor\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\groqapilibrary\\1.0.8\\groqapilibrary.1.0.8.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.7\\microsoft.aspnetcore.authorization.8.0.7.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.7\\microsoft.aspnetcore.components.8.0.7.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.7\\microsoft.aspnetcore.components.analyzers.8.0.7.nupkg.sha512",
+    "C:\\Users\\Igor\\.nuget\\packages\\microsoft.aspnetcore.metadata\\8.0.7\\microsoft.aspnetcore.metadata.8.0.7.nupkg.sha512",
     "C:\\Users\\Igor\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.11\\microsoft.entityframeworkcore.8.0.11.nupkg.sha512",
     "C:\\Users\\Igor\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\8.0.11\\microsoft.entityframeworkcore.abstractions.8.0.11.nupkg.sha512",
     "C:\\Users\\Igor\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\8.0.11\\microsoft.entityframeworkcore.analyzers.8.0.11.nupkg.sha512",

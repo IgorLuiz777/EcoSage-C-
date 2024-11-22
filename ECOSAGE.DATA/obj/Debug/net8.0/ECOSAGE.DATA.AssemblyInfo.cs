@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECOSAGE.DATA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e9d9138925cd6c51d218e000abf9b2dbffc19d56")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e68a154d08a27106093f43ddc6810910cfe1809a")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECOSAGE.DATA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECOSAGE.DATA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,4 +1,6 @@
 ﻿using ECOSAGE.DATA.models.carbonFootprint;
+using ECOSAGE.DATA.models.carbonFootprint.dto;
+using ECOSAGE.REPOSITORY.activity;
 using ECOSAGE.SERVICE.carbonFootprint;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,35 +12,51 @@ namespace ECOSAGE.API.controller
     {
         private readonly CarbonFootprintService _carbonFootprintService;
 
-        public CarbonFootprintController(CarbonFootprintService carbonFootprintService)
+        private readonly CarbonFootprintService _activityRepository;
+
+        public CarbonFootprintController(CarbonFootprintService carbonFootprintService, CarbonFootprintService activityRepository)
         {
             _carbonFootprintService = carbonFootprintService;
+            _activityRepository = activityRepository;
         }
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
         {
             var carbonFootprints = await _carbonFootprintService.GetAllCarbonFootprintsAsync();
+
+            if (carbonFootprints == null || carbonFootprints.Count == 0)
+            {
+                return NoContent();
+            }
+
             return Ok(carbonFootprints);
         }
+
 
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
-            var carbonFootprint = await _carbonFootprintService.GetCarbonFootprintByIdAsync(id);
-            if (carbonFootprint == null)
-                return NotFound();
-
-            return Ok(carbonFootprint);
+            try
+            {
+                var carbonFootprint = await _carbonFootprintService.GetCarbonFootprintByIdAsync(id);
+                return Ok(carbonFootprint);
+            }
+            catch (KeyNotFoundException e)
+            {
+                return NotFound(e.Message);
+            }
         }
 
+
         [HttpPost]
-        public async Task<IActionResult> Create([FromBody] CarbonFootprint carbonFootprint)
+        public async Task<IActionResult> Create([FromBody] CarbonFootprintRequestDto dto)
         {
             try
             {
-                await _carbonFootprintService.AddCarbonFootprintAsync(carbonFootprint);
-                return CreatedAtAction(nameof(GetById), new { id = carbonFootprint.CarbonFootprintId }, carbonFootprint);
+                await _carbonFootprintService.CreateCarbonFootprintAsync(dto);
+
+                return CreatedAtAction(nameof(GetById), new { id = dto.UserId }, dto);
             }
             catch (ArgumentException e)
             {

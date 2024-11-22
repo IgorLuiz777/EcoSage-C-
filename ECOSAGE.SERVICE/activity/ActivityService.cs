@@ -1,10 +1,6 @@
 ﻿using ECOSAGE.DATA.models.activity;
+using ECOSAGE.DATA.models.activity.dto;
 using ECOSAGE.REPOSITORY.activity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ECOSAGE.SERVICE.activity
 {
@@ -17,54 +13,91 @@ namespace ECOSAGE.SERVICE.activity
             _repository = repository;
         }
 
-        public async Task<List<Activity>> GetAllActivitiesAsync()
+        public async Task AddEnergyActivityAsync(EnergyActivityRequestDto dto)
         {
-            return await _repository.GetAllAsync();
-        }
-
-        public async Task<Activity?> GetActivityByIdAsync(int id)
-        {
-            var activity = await _repository.GetByIdAsync(id);
-            if (activity == null)
-                throw new KeyNotFoundException("Activity not found.");
-            return activity;
-        }
-
-        public async Task AddActivityAsync(Activity activity)
-        {
-            if (await ActivityExists(activity.Name))
+            if (await ActivityExists(dto.Name))
                 throw new ArgumentException("Activity with this name already exists.");
+
+            var activity = new Activity
+            {
+                UserId = dto.UserId,
+                Name = dto.Name,
+                Description = dto.Description,
+                Category = "energia",
+                Emission = CalculateEnergyEmission(dto.HoursUsed)
+            };
 
             await _repository.AddAsync(activity);
         }
 
-        public async Task UpdateActivityAsync(Activity activity)
+        public async Task AddTransportActivityAsync(TransportActivityRequestDto dto)
         {
-            var existingActivity = await _repository.GetByIdAsync(activity.ActivityId);
+            if (await ActivityExists(dto.Name))
+                throw new ArgumentException("Activity with this name already exists.");
 
-            if (existingActivity == null)
+            var activity = new Activity
+            {
+                UserId = dto.UserId,
+                Name = dto.Name,
+                Description = dto.Description,
+                Category = "transporte",
+                Emission = CalculateTransportEmission(dto.KilometersTravelled)
+            };
+
+            await _repository.AddAsync(activity);
+        }
+
+        public async Task<ActivityResponseDto> GetActivityByIdAsync(int id)
+        {
+            var activity = await _repository.GetByIdAsync(id);
+            if (activity == null)
                 throw new KeyNotFoundException("Activity not found.");
 
-            existingActivity.Name = activity.Name;
-            existingActivity.Description = activity.Description;
-            existingActivity.Category = activity.Category;
-
-            await _repository.UpdateAsync(existingActivity);
+            return MapActivityToDto(activity);
         }
 
         public async Task DeleteActivityAsync(int id)
         {
-            var existingActivity = await _repository.GetByIdAsync(id);
-            if (existingActivity == null)
+            var activity = await _repository.GetByIdAsync(id);
+            if (activity == null)
                 throw new KeyNotFoundException("Activity not found.");
 
             await _repository.DeleteAsync(id);
+        }
+
+        public async Task<IEnumerable<ActivityResponseDto>> GetAllAsync()
+        {
+            var activities = await _repository.GetAllAsync();
+            return activities.Select(MapActivityToDto); // Mapeia para DTO antes de retornar
         }
 
         private async Task<bool> ActivityExists(string name)
         {
             var activities = await _repository.GetAllAsync();
             return activities.Any(a => a.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        }
+
+        private decimal CalculateEnergyEmission(int hoursUsed)
+        {
+            return 0.5m * hoursUsed;
+        }
+
+        private decimal CalculateTransportEmission(decimal kilometersTravelled)
+        {
+            return 0.2m * kilometersTravelled;
+        }
+
+        private ActivityResponseDto MapActivityToDto(Activity activity)
+        {
+            return new ActivityResponseDto
+            {
+                ActivityId = activity.ActivityId,
+                Name = activity.Name,
+                Description = activity.Description,
+                Category = activity.Category,
+                Emission = activity.Emission,
+                CarbonFootprintId = activity.CarbonFootprintId
+            };
         }
     }
 }

@@ -7,6 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <PackageReference Include="GroqApiLibrary" Version="1.0.8" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\ECOSAGE.DATA\ECOSAGE.DATA.csproj" />
       <ProjectReference Include="..\ECOSAGE.REPOSITORY\ECOSAGE.REPOSITORY.csproj" />
     </ItemGroup>
 
