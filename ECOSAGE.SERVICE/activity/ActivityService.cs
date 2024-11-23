@@ -1,20 +1,26 @@
 ﻿using ECOSAGE.DATA.models.activity;
 using ECOSAGE.DATA.models.activity.dto;
 using ECOSAGE.REPOSITORY.activity;
+using ECOSAGE.REPOSITORY.user;
 
 namespace ECOSAGE.SERVICE.activity
 {
     public class ActivityService
     {
         private readonly ActivityRepository _repository;
+        private readonly UserRepository _userRepository;
 
-        public ActivityService(ActivityRepository repository)
+        public ActivityService(ActivityRepository repository, UserRepository userRepository)
         {
             _repository = repository;
+            _userRepository = userRepository;
         }
 
         public async Task AddEnergyActivityAsync(EnergyActivityRequestDto dto)
         {
+            if (!await UserExists(dto.UserId))
+                throw new ArgumentException("User not found.");
+
             if (await ActivityExists(dto.Name))
                 throw new ArgumentException("Activity with this name already exists.");
 
@@ -32,6 +38,9 @@ namespace ECOSAGE.SERVICE.activity
 
         public async Task AddTransportActivityAsync(TransportActivityRequestDto dto)
         {
+            if (!await UserExists(dto.UserId))
+                throw new ArgumentException("User not found.");
+
             if (await ActivityExists(dto.Name))
                 throw new ArgumentException("Activity with this name already exists.");
 
@@ -75,6 +84,12 @@ namespace ECOSAGE.SERVICE.activity
         {
             var activities = await _repository.GetAllAsync();
             return activities.Any(a => a.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
+        }
+
+        private async Task<bool> UserExists(int userId)
+        {
+            var user = await _userRepository.GetByIdAsync(userId);
+            return user != null;
         }
 
         private decimal CalculateEnergyEmission(int hoursUsed)

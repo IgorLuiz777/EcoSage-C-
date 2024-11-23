@@ -3,10 +3,10 @@ using ECOSAGE.DATA.models.carbonFootprint;
 using ECOSAGE.DATA.models.carbonFootprint.dto;
 using ECOSAGE.REPOSITORY.activity;
 using ECOSAGE.REPOSITORY.carbonFootprint;
+using ECOSAGE.REPOSITORY.user;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ECOSAGE.SERVICE.carbonFootprint
@@ -14,13 +14,17 @@ namespace ECOSAGE.SERVICE.carbonFootprint
     public class CarbonFootprintService
     {
         private readonly CarbonFootprintRepository _repository;
-
         private readonly ActivityRepository _activityRepository;
+        private readonly UserRepository _userRepository;
 
-        public CarbonFootprintService(CarbonFootprintRepository repository, ActivityRepository activityRepository)
+        public CarbonFootprintService(
+            CarbonFootprintRepository repository,
+            ActivityRepository activityRepository,
+            UserRepository userRepository)
         {
             _repository = repository;
             _activityRepository = activityRepository;
+            _userRepository = userRepository;
         }
 
         public async Task<List<CarbonFootprintResponseDto>> GetAllCarbonFootprintsAsync()
@@ -71,9 +75,11 @@ namespace ECOSAGE.SERVICE.carbonFootprint
             return result;
         }
 
-
         public async Task CreateCarbonFootprintAsync(CarbonFootprintRequestDto dto)
         {
+            if (!await UserExists(dto.UserId))
+                throw new ArgumentException("User not found.");
+
             var activities = new List<Activity>();
 
             foreach (var activityId in dto.ActivityIds)
@@ -102,7 +108,6 @@ namespace ECOSAGE.SERVICE.carbonFootprint
             await _repository.AddAsync(carbonFootprint);
         }
 
-
         public async Task UpdateCarbonFootprintAsync(CarbonFootprint carbonFootprint)
         {
             var existingCarbonFootprint = await _repository.GetByIdAsync(carbonFootprint.CarbonFootprintId);
@@ -121,6 +126,12 @@ namespace ECOSAGE.SERVICE.carbonFootprint
             if (existingCarbonFootprint == null)
                 throw new KeyNotFoundException("Carbon Footprint not found.");
             await _repository.DeleteAsync(id);
+        }
+
+        private async Task<bool> UserExists(int userId)
+        {
+            var user = await _userRepository.GetByIdAsync(userId);
+            return user != null;
         }
     }
 }

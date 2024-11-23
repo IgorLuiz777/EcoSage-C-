@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ECOSAGE.SERVICE")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9c17d6bc688b52577259e3c6d2f51d77a1622021")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+758f1bdf6923bea1970bfd56004b0d729396771b")]
 [assembly: System.Reflection.AssemblyProductAttribute("ECOSAGE.SERVICE")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ECOSAGE.SERVICE")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
